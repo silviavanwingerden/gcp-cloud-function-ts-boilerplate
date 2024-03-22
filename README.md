@@ -1,4 +1,4 @@
-# GCP Cloud Function TypeScript Template
+# GCP Cloud Function TypeScript Template 🦄
 
 This repository contains a template for creating Google Cloud Platform (GCP) Cloud Functions using TypeScript.
 
