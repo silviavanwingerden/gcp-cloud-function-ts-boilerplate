@@ -1,0 +1,27 @@
+{
+  "name": "gcp-cloud-function-boilerplate",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "dotenv cross-var npx functions-framework --target=%GCP_FUNCTION_ENTRYPOINT% [--signature-type=http]",
+    "test": "jest",
+    "deploy": "dotenv cross-var gcloud functions deploy %GCP_FUNCTION_NAME% --gen2 --region=%GCP_FUNCTION_REGION% --runtime=%GCP_FUNCTION_RUNTIME% --entry-point=%GCP_FUNCTION_ENTRYPOINT% --trigger-http",
+    "gcp-build": "npm run build"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "cross-var": "^1.1.0",
+    "dotenv-cli": "^7.4.1",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2"
+  },
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.3.0",
+    "@sentry/serverless": "^7.106.1",
+    "axios": "^1.6.7",
+    "express": "^4.18.3",
+    "typescript": "^5.4.2"
+  }
+}

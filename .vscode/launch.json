@@ -1,0 +1,16 @@
+{
+  "configurations": [
+    {
+      "name": "Deploy Cloud Function",
+      "type": "cloudcode.cloudfunctions",
+      "request": "launch",
+      "functionName": "shopify-order-printapi",
+      "region": "europe-west1",
+      "gen": "GEN_2",
+      "revision": "shopify-order-printapi-00001-nel",
+      "entryPoint": "helloHttp",
+      "runtime": "nodejs20",
+      "testInput": ""
+    }
+  ]
+}
